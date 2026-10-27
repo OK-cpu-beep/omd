@@ -7,7 +7,7 @@ def task_1_solve(moscow: set, kazan: set):
     only_moscow = moscow.difference(kazan)
     only_kazan = kazan.difference(moscow)
     moscow_or_kazan = moscow.union(kazan)
-    return moscow_and_kazan, only_moscow, only_kazan, moscow_or_kazan
+    return moscow_and_kazan, only_moscow, only_kazan, len(moscow_or_kazan)
 
 
 def task_2_solve(queries: list[str]):
@@ -45,7 +45,7 @@ def task_3_solve(orders: list[dict]):
                          for order in delivered_orders) / len(delivered_orders)
 
     return (returned_orders_sum, buyers_with_returns,
-            delivered_orders_for_buyer, mean_check)
+            len(delivered_orders_for_buyer), mean_check)
 
 
 def task_4_solve(days: list[dict]):
