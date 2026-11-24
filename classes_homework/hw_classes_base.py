@@ -200,7 +200,7 @@ def demo():
     saved_idf.clear()
     print("IDF после очистки полученного списка:", tfidf.idf)
 
-    print("\nСценарий 2. Настройки и новый fit()")
+    print("Сценарий 2. Настройки и новый fit()")
     tf = TfidfVectorizer.from_config({
         "lowercase": False,
         "use_idf": False,
@@ -215,7 +215,7 @@ def demo():
     print("Новые IDF:", tfidf.idf)
     print("Новая матрица:", tfidf.transform(["Марс Венера облака"]))
 
-    print("\nСценарий 3. Ключевые слова")
+    print("Сценарий 3. Ключевые слова")
     extractor = KeywordExtractor(tfidf, top_n=2)
     extractor.fit(TRAIN_CORPUS)
     print("До двух слов:", extractor.extract(CHECK_CORPUS))
